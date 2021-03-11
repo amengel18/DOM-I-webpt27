@@ -58,7 +58,7 @@ document.querySelector("nav").appendChild(newA)
 
 const newA2 = document.createElement("a")
 newA2.textContent = "FAQ"
-document.querySelector("nav").appendChild(newA2)
+document.querySelector("nav").prepend(newA2)
 
 // cta content
 
