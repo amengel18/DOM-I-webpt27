@@ -45,10 +45,20 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let navBar = document.querySelectorAll("nav a");
 navBar.forEach((nav, index) =>{
-  nav.innerHTML = siteContent.nav[`nav-item-${index + 1}`]
+  nav.textContent = siteContent.nav[`nav-item-${index + 1}`]
 })
 
 console.log(navBar)
+
+// add new items to nav bar
+
+const newA = document.createElement("a")
+newA.textContent = "Help"
+document.querySelector("nav").appendChild(newA)
+
+const newA2 = document.createElement("a")
+newA2.textContent = "FAQ"
+document.querySelector("nav").appendChild(newA2)
 
 // cta content
 
@@ -56,10 +66,10 @@ let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 let h1 = document.querySelector(".cta-text h1")
-h1.innerHTML = siteContent["cta"]["h1"]
+h1.textContent = siteContent["cta"]["h1"]
 
 let button = document.querySelector(".cta-text button")
-button.innerHTML = siteContent["cta"]["button"]
+button.textContent = siteContent["cta"]["button"]
 
 //  main content
 
@@ -100,6 +110,13 @@ contactP[2].textContent = siteContent["contact"]["email"]
 
 const footContent = document.querySelector("footer p");
 footContent.textContent = siteContent["footer"]["copyright"]
+
+
+// change nav text color
+
+navBar.forEach((item) => {
+  item.style.color = "green"
+})
 
 
 
